@@ -1,4 +1,8 @@
-function createHomePage(){
+import { createHeaderBox } from './boxes';
+import { createTxtBox } from './boxes';
+import background from './funfetti.jpg';
+
+export function createHomePage(){
     const container = document.createElement('div');
         container.id ='about';
     const pleasance = createHeaderBox('pleasance');
