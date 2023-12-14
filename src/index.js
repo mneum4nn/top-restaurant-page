@@ -1,8 +1,8 @@
 import _ from 'lodash';
-import { createHeaderBox } from './boxes';
-import { createTxtBox } from './boxes';
+
 import { createForm } from './delivery';
-import background from './funfetti.jpg';
+import { createHomePage }  from'./home';
+
 
 console.log("I'm working");
 

@@ -27,3 +27,18 @@ export function createTxtBox(bigText, smallText){
     console.log('Box created');
     return container; 
 }
+
+export function createImgBox (imgSrc, text, altText){
+    const container = document.createElement('div');
+    const image = document.createElement('img');
+    image.src = imgSrc;
+    image.alt = altText; // Add a description for accessibility
+
+    const text = document.createElement('p');
+    text.textContent = textContent;
+
+    container.appendChild(image);
+    container.appendChild(text);
+
+    return container;
+}
