@@ -8,7 +8,7 @@ export function createHeaderBox(something){
         txt.innerText = something; 
         container.appendChild(txt);
 
-    
+    console.log('Header created');
     return container;
 }
 
@@ -24,5 +24,6 @@ export function createTxtBox(bigText, smallText){
     container.appendChild(subtitle);
     container.appendChild(txt);
 
+    console.log('Box created');
     return container; 
 }

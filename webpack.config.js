@@ -5,8 +5,9 @@ module.exports = {
     mode:'development',
 
     entry: {
+        boxes:'./src/boxes.js',
         index:'./src/index.js',
-        boxes:'./src/boxes.js'
+
     },
 
     devtool: 'inline-source-map',
@@ -19,6 +20,14 @@ module.exports = {
         filename: '[name].bundle.js',
         path: path.resolve(__dirname, 'dist'),
         clean:true,
+    },
+    module:{
+        rules:[
+            {
+                test: /\.(png|svg|jpg|jpeg|gif)$/i,
+                type: 'asset/resource',
+            },
+        ]
     },
 
     plugins : [
