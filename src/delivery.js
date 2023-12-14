@@ -1,6 +1,6 @@
 import { createHeaderBox } from './boxes';
 
-export function createPage (){
+export function createForm (){
 
     let title = createHeaderBox('Want to order from us?'); 
     let formBox = document.createElement('div');
