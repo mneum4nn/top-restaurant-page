@@ -5,6 +5,10 @@ import { createPage } from './delivery';
 import background from './funfetti.jpg';
 console.log("I'm working");
 
+function determineTab (tabID){
+
+}
+
 document.addEventListener('DOMContentLoaded', () => {
     const content = document.querySelector('.content');
         content.style.display= 'flex';
@@ -21,6 +25,9 @@ document.addEventListener('DOMContentLoaded', () => {
     content.appendChild(pleasance);
     content.appendChild(aboutUs);
     content.appendChild(hours);
+
+    const delivForm = createPage();
+    content.appendChild(delivForm);
 
 
 });

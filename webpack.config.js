@@ -6,6 +6,7 @@ module.exports = {
 
     entry: {
         boxes:'./src/boxes.js',
+        delivery:'./src/delivery.js',
         index:'./src/index.js',
 
     },
