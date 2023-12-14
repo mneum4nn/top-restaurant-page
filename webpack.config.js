@@ -7,6 +7,7 @@ module.exports = {
     entry: {
         boxes:'./src/boxes.js',
         delivery:'./src/delivery.js',
+        menu:'./src/menu.js',
         index:'./src/index.js',
 
     },

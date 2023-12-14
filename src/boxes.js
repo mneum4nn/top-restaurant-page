@@ -31,11 +31,12 @@ export function createTxtBox(bigText, smallText){
 export function createImgBox (imgSrc, text, altText){
     const container = document.createElement('div');
     const image = document.createElement('img');
-    image.src = imgSrc;
-    image.alt = altText; // Add a description for accessibility
+        image.src = imgSrc;
+        image.alt = altText; // Add a description for accessibility
+        image.classList.add('round');
 
-    const text = document.createElement('p');
-    text.textContent = textContent;
+    const description = document.createElement('p');
+        description.textContent = textContent;
 
     container.appendChild(image);
     container.appendChild(text);
