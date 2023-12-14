@@ -1,0 +1,23 @@
+//create factory functions to create a variety of textboxes, titleboxes, headings, etc
+
+function createHeaderBox(){
+    const container = document.createElement('div');
+        container.classList.add('heading');
+        
+    const txt = document.createElement('h1');
+        container.appendChild(txt);
+    
+    return container;
+}
+
+function createTxtBox(){
+    const container = document.createElement('div');
+        container.classList.add('txt-box');
+    const subtitle = document.createElement('h2');
+        subtitle.classList.add('subtitle');
+    const txt  = document.createElement('p');
+    container.appendChild(subtitle);
+    container.appendChild(txt);
+
+    return container; 
+}
