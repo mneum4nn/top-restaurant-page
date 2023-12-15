@@ -1,21 +1,30 @@
 import { createHeaderBox } from './boxes';
 import { createImgBox } from './boxes';
+import crepe from './menu-items/crepe.jpg';
+import oysters from './menu-items/oysters.jpg';
+import pasta from './menu-items/pasta.jpg';
+import salad from './menu-items/pasta.jpg';
+import tulip from './menu-items/pasta.jpg';
+
 
 export function createMenu(){
     const menu = document.createElement('div');
         menu.classList.add('menu');
+
     const title = createHeaderBox('our menu');
-    const crepe = createImgBox('./menu-items/crepe.jpg','Delicious poppy seed crepes, soft and aromatic','Crepes with poppy seeds');
-    const pasta = createImgBox('./menu-items./pasta.jpg','Our delicate handcrafted fetuccine with unicorn truffle','Pasta with edible flowers');
-    const oysters = createImgBox('./menu-items/oysters.jpg','Fresh oysters, raised by local mermaids','Oyster platter with pink salt');
-    const tulip = createImgBox('./menu-items/tulip.jg', 'Our house specialty, tulips! There are no words to describe these, only a deep meaningful gaze of wonder','tulip on a plate');
-    const salad = createImgBox('./menu-items/salad.jpg', 'Fresh herb salad with arugula','Salad');
+
+    const crepeBox = createImgBox(crepe ,'Delicious poppy seed crepes, soft and aromatic','Crepes with poppy seeds');
+    const pastaBox = createImgBox(pasta,'Our delicate handcrafted fetuccine with unicorn truffle','Pasta with edible flowers');
+    const oystersBox = createImgBox(oysters,'Fresh oysters, raised by local mermaids','Oyster platter with pink salt');
+    const tulipBox = createImgBox(tulip, 'Our house specialty, tulips! There are no words to describe these, only a deep meaningful gaze of wonder','tulip on a plate');
+    const saladBox = createImgBox(salad, 'Fresh herb salad with arugula','Salad');
 
     menu.appendChild(title);
-    menu.appendChild(crepe);
-    menu.appendChild(pasta);
-    menu.appendChild(oysters);
-    menu.appendChild(tulip);
-    menu.appendChild(salad);
+    menu.appendChild(crepeBox);
+    menu.appendChild(pastaBox);
+    menu.appendChild(oystersBox);
+    menu.appendChild(tulipBox);
+    menu.appendChild(saladBox);
+
     return menu;
 }

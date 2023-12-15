@@ -28,18 +28,13 @@ export function createTxtBox(bigText, smallText){
     return container; 
 }
 
-export function createImgBox (imgSrc, text, altText){
+export function createImgBox (imgName, desc){
     const container = document.createElement('div');
-    const image = document.createElement('img');
-        image.src = imgSrc;
-        image.alt = altText; // Add a description for accessibility
-        image.classList.add('round');
-
+        container.style.backgroundImage = `url(${imgName})`;
     const description = document.createElement('p');
-        description.textContent = textContent;
+        description.textContent = desc;
 
-    container.appendChild(image);
-    container.appendChild(text);
+    container.appendChild(description);
 
     return container;
 }

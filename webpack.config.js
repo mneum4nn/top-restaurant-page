@@ -15,7 +15,10 @@ module.exports = {
     devtool: 'inline-source-map',
 
     devServer:{
-        static:'./dist',
+        static:[
+            path.resolve(__dirname,'src'),
+            path.resolve(__dirname,'menu-items')
+        ]
     },
 
     output: {
