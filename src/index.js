@@ -1,4 +1,5 @@
 import _ from 'lodash';
+import './style.css';
 
 import { createForm } from './delivery';
 import { createHomePage }  from'./home';
@@ -14,7 +15,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
     const homepage = createHomePage()
     content.appendChild(homepage);
-    let prevSelected = homepage;
+
+
     
     const homeTab = document.getElementById('about');
     const menuTab = document.getElementById('menu');
@@ -22,19 +24,11 @@ document.addEventListener('DOMContentLoaded', function () {
 
     function tabHandler (tabID){
         let newPage;
-
         //empty out previous page
         while (content.firstChild) {
             content.removeChild(content.firstChild);
         }
-        //remove tab color from previously selected page
-                prevSelected.style.backgroundColor = 'blue' ;
-                prevSelected.classList.remove('selected');
-        //set new selected tab's color
-            const curSelected = document.getElementById(tabID);
-                curSelected.style.backgroundColor = 'red';
-                curSelected.classList.add('selected');
-        
+
         switch (tabID){
             case 'delivery':
                 newPage = createForm ();

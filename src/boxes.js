@@ -30,6 +30,7 @@ export function createTxtBox(bigText, smallText){
 
 export function createImgBox (imgName, desc){
     const container = document.createElement('div');
+        container.classList.add('img-box');
         container.style.backgroundImage = `url(${imgName})`;
     const description = document.createElement('p');
         description.textContent = desc;
